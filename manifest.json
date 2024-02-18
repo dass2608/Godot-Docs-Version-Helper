@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "Godot Docs Version Helper",
+  "version": "0.9",
+
+  "description": "Helps you to navigate",
+
+  "content_scripts": [
+    {
+      "matches": ["*://docs.godotengine.org/*"],
+      "js": ["src/main.js"]
+    }
+  ],
+
+  "permissions": [
+    "storage"
+  ],
+
+  "browser_action": {
+    "default_icon": "icon.svg",
+    "default_title": "Godot Docs Version Helper",
+    "default_popup": "src/config_popup/config_popup.html"
+  },
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "godot-docs-version-helper@dass2608.de"
+    }
+  }
+  
+}
